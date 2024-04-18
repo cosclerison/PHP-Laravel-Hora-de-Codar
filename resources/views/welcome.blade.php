@@ -36,6 +36,23 @@
             <h3>O nome não é identificado</h3>
         @endif
 
+        @for($i = 0; $i < count($arr); $i++)
+            <p> Valor = {{ $arr[$i]}}, indice = {{$i}}</p>
+            @if($i == 2)
+                <p>O indice é 2</p>
+            @endif
+        @endfor
 
+        @php
+            $name = "João";
+            echo $name;
+        @endphp
+
+        @foreach($nomes as $nome)
+            <p>{{$loop->index}} {{$nome}}</p>
+        @endforeach
+
+        <!-- Comentário do HTML -->
+        {{-- Comentário do BLADE --}}
     </body>
 </html>
