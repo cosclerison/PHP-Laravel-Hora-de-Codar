@@ -14,8 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 // Rota da pagina
 Route::get('/', function () {
+
+    $nome = "clerison";
+    $idade = 40;
+    $profissao = "Developer";
+
     // nome do arquivo da view
-    return view('welcome');
+    return view('welcome', 
+    [
+        'nome'      => $nome, 
+        'idade'     => $idade,
+        'profissao' => $profissao
+    ]);
 });
 
 Route::get('/contact', function () {

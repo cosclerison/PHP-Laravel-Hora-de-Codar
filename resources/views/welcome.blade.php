@@ -22,5 +22,20 @@
     </head>
     <body class="antialiased">
         <h1>HOME</h1>
+        <p>Author: {{$nome}}</p>
+        @if(10 > 5)
+            <h3>Resultado TRUE</h3>
+        @endif
+
+        @if($nome == "clerison")
+            <h3>O nome é {{$nome}}, tem {{$idade}} anos.</h3>
+            <h3>Sua profissão é {{$profissao}}.</h3>
+        @elseif($nome == "juliana")
+            <h3>O nome é {{$nome}}</h3>
+        @else
+            <h3>O nome não é identificado</h3>
+        @endif
+
+
     </body>
 </html>
