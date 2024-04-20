@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,29 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 // Rota da pagina
-Route::get('/', function () {
+Route::get('/', [EventController::class, 'index']);
 
-    $nome       = "clerison";
-    $idade      = 40;
-    $profissao  = "Developer";
-    $arr        = [10,20,30,40,50];
-    $nomes      = [
-                    "Clerison",
-                    "Juliana",
-                    "Bianca",
-                    "Maggie",
-                ];
-
-    // nome do arquivo da view
-    return view('welcome', 
-    [
-        'nome'      => $nome, 
-        'idade'     => $idade,
-        'profissao' => $profissao,
-        'arr'       => $arr,
-        'nomes'     => $nomes
-    ]);
-});
+Route::get('/events/create', [EventController::class, 'create']);
 
 Route::get('/contact', function () {
     return view('contact');
