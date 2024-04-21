@@ -21,14 +21,3 @@ Route::get('/events/create', [EventController::class, 'create']);
 Route::get('/contact', function () {
     return view('contact');
 });
-
-Route::get('/products', function () {
-
-    $busca = request('search');
-
-    return view('products', ['busca' => $busca]);
-});
-
-Route::get('/product/{id?}', function ($id = null) {
-    return view('product', ['id' => $id]);
-});
