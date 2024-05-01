@@ -6,8 +6,18 @@
 <!-- Inicio -->
 <div id="event-create-container" class="col-md-6 offset-md-3">
     <h1>Crie o seu Evento</h1>
-    <form action="/events" method="post">
+    <!-- adicionamos enctype="multipart/form-data" para envio de arquivos pelo formulario -->
+    <form action="/events" method="post" enctype="multipart/form-data">
         @csrf
+        <div class="form-group">
+            <label for="image">Imagem do evento:</label>
+            <input 
+                type="file" 
+                class="form-control-file"
+                id="image"
+                name="image"
+                placeholder="Nome do evento...">
+        </div>
         <div class="form-group">
             <label for="title">Evento:</label>
             <input 
