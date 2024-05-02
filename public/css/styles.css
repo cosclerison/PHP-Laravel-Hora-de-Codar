@@ -184,6 +184,16 @@ header  {
     margin: 20px 0;
 }
 
+#items-list {
+    list-style: nome;
+    padding-left: 0;
+}
+
+#items-list li {
+    display: flex;
+}
+
+
 
 /* Footer */
 footer {

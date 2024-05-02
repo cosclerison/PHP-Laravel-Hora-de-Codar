@@ -51,12 +51,29 @@
                 class="form-control mb-4"
                 placeholder="O que vai acontecer neste evento?"
                 cols="30" 
-                rows="10"
-            >
+                rows="10">
             </textarea>
-
+        </div>
+        <div class="form-group">
+            <label for="items">Adicione itens de infraestrutura:</label>
+            <div class="form-group">
+                <input type="checkbox" name="items[]" id="items" value="Cadeiras"> Cadeiras
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="items[]" id="items" value="Palco"> Palco
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="items[]" id="items" value="Bebida"> Bebida
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="items[]" id="items" value="Open Food"> Open Food
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="items[]" id="items" value="Brindes"> Brindes
+            </div>
         </div>
         <input type="submit" class="btn btn-primary" value="Criar Evento">
     </form>
 </div>
+
 @endsection
