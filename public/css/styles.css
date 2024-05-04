@@ -185,6 +185,15 @@ header  {
     margin: 20px 0;
 }
 
+#info-container .already-joined-msg {
+    margin: 15px 0;
+    color: #004085;
+    background-color: #CCE5FF;
+    border: 1px solid #B8DAFF;
+    padding: 10px;
+    width: 275px;
+}
+
 #items-list {
     list-style: nome;
     padding-left: 0;
