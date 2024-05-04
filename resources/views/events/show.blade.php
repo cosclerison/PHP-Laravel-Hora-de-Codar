@@ -26,6 +26,14 @@
             <p class="event-owner">
                 <ion-icon name="star-outline"></ion-icon>
                 {{ $eventOwner['name'] }}
+            </p> 
+            <p class="event-owner">
+                <p><ion-icon name="ticket-outline"></ion-icon>
+                @if($event->private == 1)
+                    PRIVADO</p>
+                @else
+                    LIVRE</p>
+                @endif
             </p>
             @if(!$hasUserJoined)
                 <form action="/events/join/{{ $event->id }}" method="get">

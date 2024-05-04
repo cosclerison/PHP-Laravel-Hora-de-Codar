@@ -31,6 +31,13 @@
                 <p class="card-date">{{ date('d/m/Y', strtotime($event->date)) }}</p>
                 <h5 class="card-title">{{ $event->title }}</h5>
                 <p class="card-participants">{{ isset($event['users']) ? count($event['users']) : 0 }} - Participantes</p>
+                <p class="card-private"><ion-icon name="ticket-outline"></ion-icon>
+                    @if($event->private == 1)
+                        Privado</p>
+                    @else
+                        Livre</p>
+                    @endif
+                </p>
                 <a href="/events/{{ $event->id }}" class="btn btn-primary">Saber mais</a>
             </div>
         </div>

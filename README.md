@@ -4,6 +4,14 @@ $ php artisan serve
 ## Para criar migration 
 $ php artisan make:migration add_items_to_events_table
 
+## Para executar a migration
+$ php artisan migrate
+
+OBS: este comando abaixo zera todo banco de dados
+$ php artisan migrate:fresh
+
+# Dump banco de dados
+Arquivo dump do banco de dados esta dentro da pasta migration
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
