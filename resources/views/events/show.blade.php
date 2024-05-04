@@ -20,13 +20,23 @@
             </p>
             <p class="event-participants">
                 <ion-icon name="people-outline"></ion-icon>
-                X - Participantes
+                {{ isset($event['users']) ? count($event['users']) : 0 }} - Participantes
+
             </p>
             <p class="event-owner">
                 <ion-icon name="star-outline"></ion-icon>
                 {{ $eventOwner['name'] }}
             </p>
-            <a href="#" class="btn btn-primary" id="event-submit">Confirmar presença</a>
+            <form action="/events/join/{{ $event->id }}" method="get">
+                @csrf
+                <a  href="/events/join/{{ $event->id }}" 
+                    class="btn btn-primary" 
+                    id="event-submit"
+                    onclick="event.presentDefault();
+                    this.closest('form').submit();">
+                    Confirmar presença
+                </a>
+            </form>
             <h3>O Evento conta com:</h3>
             <ul id="items-list">
                 @foreach($event->items as $item)
